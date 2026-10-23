@@ -1,0 +1,28 @@
+/* Dipakai oleh home.html dan semua halaman di dalam iframe */
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; font-family: "Times New Roman", serif; }
+
+/* ===== home.html: grid 4 area ===== */
+.halaman {
+  display: grid;
+  grid-template-columns: 150px 1fr;   /* menu | konten */
+  grid-template-rows: 100px 1fr 50px; /* header | tengah | footer */
+  height: 100vh;
+}
+.halaman iframe { width: 100%; height: 100%; border: 0; display: block; }
+.f-header { grid-column: 1 / 3; }
+.f-menu   { border-right: 1px solid #888; }
+.f-footer { grid-column: 1 / 3; }
+
+/* ===== isi tiap iframe ===== */
+.isi-header { background: cyan; text-align: center; }
+.isi-header h1 { margin: 14px 0 6px; font-size: 24px; }
+.isi-header p  { margin: 0; font-size: 12px; font-weight: bold; }
+
+.isi-menu { background: #b0e0e6; font-size: 13px; padding: 4px; }
+
+.isi-konten { background: pink; padding: 8px 12px; }
+
+.isi-footer { background: #000; color: #b0e0e6; text-align: center;
+              font-size: 12px; font-weight: bold; }
+.isi-footer p { margin: 0; padding: 18px 0; }
